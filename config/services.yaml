@@ -1,0 +1,16 @@
+# services.yaml
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+
+    App\Log\ComposerLog:
+        arguments: []  # If your service doesn't require any arguments
